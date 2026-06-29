@@ -9,6 +9,16 @@ int main(){
     v.push_back(20);
     v.push_back(30);
     v.push_back(40);
+    //iterate using for each
+for(int i:v){
+    cout<< i <<endl;
+}
+// iterate using while loop
+vector<int>::iterator it = v.begin();
+while(it!=v.end()){
+    cout<< *it <<endl;
+    it++;
+}
     cout<< v.size() <<endl; // tells the size of the vector --> 4
     v.begin(); // to iterate the vector from the beginning
     cout<< *(v.begin()) <<endl; // to print the first element of the vector
@@ -27,5 +37,6 @@ cout<<"vector is empty" <<endl;
         cout<<"vector is not empty" <<endl;
     }
 cout<< v.size() <<endl; // tells the size of the vector --> 2
+
     return 0;
 }
