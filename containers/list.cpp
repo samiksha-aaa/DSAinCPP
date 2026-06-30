@@ -29,6 +29,5 @@ cout<<"list is empty" <<endl;
     else{
         cout<<"list is not empty" <<endl;
     }
-
     return 0;
 }
