@@ -25,11 +25,7 @@ int main(){
     int n;
 cout<<"enter n:"<<endl;
 cin>>n;
- vector<int> nums(n);
-for(int i=0;i<n;i++){
-    cin>>nums[i];
-}
-int ans=getmissingnumber(nums);
+int ans=getmissingnumber(n);
 cout<<ans;
     return 0;
 }
