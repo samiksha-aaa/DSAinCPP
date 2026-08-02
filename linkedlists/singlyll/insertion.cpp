@@ -39,7 +39,32 @@ tail=newnode;
         temp=temp->next;
             }
     }
-
+    int len(node* head){
+        node* temp=head;
+        int len=0;
+        while(temp!=NULL){
+            len++;
+            temp=temp->next;
+        } return len;
+    }
+void insertatpos(int position,int value,node* &head,node* &tail){
+    if(position==1){
+        insertathead(value,head,tail);
+        return;
+}
+        else if(position==len(head)+1){
+        insertatend(value,head,tail);
+        return;
+        }
+     node* newnode=new node(value);
+     node* temp=head;
+     for(int i=1;i<=position-2;i++){
+ temp=temp->next;
+     }
+     newnode->next=temp->next;
+     temp->next=newnode;
+    }
+    // search any value in the linkedlist
     bool searchvalue(int target,node* head){
         node* temp=head;
         while(temp!=NULL){
@@ -62,5 +87,8 @@ int main(){
     bool found=searchvalue(30,head);
     cout<<endl;
     cout<<found;
+    cout<<endl;
+    insertatpos(3,100,head,tail);
+    printlinkedlist(head);
     return 0;
 }
