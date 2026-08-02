@@ -40,11 +40,27 @@ tail=newnode;
             }
     }
 
+    bool searchvalue(int target,node* head){
+        node* temp=head;
+        while(temp!=NULL){
+            if(temp->data==target){
+                return true;
+            }else{
+                temp=temp->next;
+            }
+        } return false;
+    }
 int main(){
     node* head=NULL;
     node* tail=NULL;
     insertathead(10,head,tail);
     insertatend(20,head,tail);
+    insertatend(30,head,tail);
+    insertatend(40,head,tail);
+    insertatend(50,head,tail);
     printlinkedlist(head);
+    bool found=searchvalue(30,head);
+    cout<<endl;
+    cout<<found;
     return 0;
 }
